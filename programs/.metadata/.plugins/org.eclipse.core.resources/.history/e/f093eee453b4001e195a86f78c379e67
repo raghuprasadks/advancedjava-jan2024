@@ -1,0 +1,9 @@
+package collectionsdemo;
+
+public class Account {
+	private int actnum;
+	private String name;
+	private String bank;
+	private int balance;
+
+}
