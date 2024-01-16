@@ -1,0 +1,27 @@
+package collectionsdemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cart {
+
+	private List<Product> productList = new ArrayList<Product>();
+	
+	public void addProduct(Product product) {
+		System.out.println("add Product");
+		productList.add(product);
+	}
+	
+	public void listProduct() {
+		for (int i=0;i<productList.size;i++) {
+			Product product = productList.get(i);
+			System.out.println(product);			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\kaushalya\consultancy\newhorizonenggcollege\2024\ce\advancedjava\workshop\programs\.metadata\.plugins\org.eclipse.jdt.core
+3501714628.index
+1865797976.index
+2336110468.index

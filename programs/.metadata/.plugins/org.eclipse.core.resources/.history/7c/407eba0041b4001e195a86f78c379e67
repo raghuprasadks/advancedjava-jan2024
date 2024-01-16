@@ -1,0 +1,30 @@
+package collectionsdemo;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		Set<String> countrylist = new HashSet<String>();
+		countrylist.add("India");
+		countrylist.add("Japan");
+		countrylist.add("Korea");
+		countrylist.add("USA");
+		countrylist.add("India");
+		
+		Iterator itr = countrylist.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		
+		
+		
+		
+
+	}
+
+}

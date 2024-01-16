@@ -1,0 +1,4 @@
+https://roadmap.sh/
+https://www.javaguides.net/2019/03/jsp-servlet-jdbc-mysql-crud-example-tutorial.html
+
+https://github.com/RameshMF/jsp-servlet-jdbc-mysql-crud-tutorial.

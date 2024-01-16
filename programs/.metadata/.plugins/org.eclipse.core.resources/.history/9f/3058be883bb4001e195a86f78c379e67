@@ -1,0 +1,80 @@
+package collectionsdemo;
+import java.util.ArrayList;
+import java.util.List;
+public class Cart {
+	private List<Product> productList = new ArrayList<Product>();	
+	public void addProduct(Product product) {
+		System.out.println("add Product");
+		productList.add(product);
+	}	
+	public void listProduct() {
+		System.out.println("list Product");
+		for (int i=0;i<productList.size();i++) {
+			Product product = productList.get(i);
+			System.out.println(product);			
+		}
+	}
+	
+	public void updateProduct(Product product) {
+		for (int i=0;i<productList.size();i++) {
+			Product prod = productList.get(i);
+			if (prod.getCode() == product.getCode()) {
+				productList.set(i, product);
+			}							
+		}
+	}
+	
+	public void deleteProduct (int code) {
+		Product prodtodelete=null;
+		boolean isfound=false;
+		for (int i=0;i<productList.size();i++) {
+			Product prod = productList.get(i);
+			if (prod.getCode() == code) {
+				prodtodelete = prod;
+				isfound = true;
+				break;
+			}							
+		}
+		if (isfound==true) {
+			productList.remove(prodtodelete);
+		}
+		
+	}
+	
+	public List<Product> productsBySupplier(String supplier){
+		List<Product> productsbySupp = new ArrayList<Product>();
+		
+		for (Product prod : productList) {
+			if(prod.getSupplier().equalsIgnoreCase(supplier)) {
+				productsbySupp.add(prod);
+			}
+		}
+		return productsbySupp;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Product prod1 = new Product(1,"mobile","Samsung",50000);
+		Product prod2 = new Product(2,"laptop","Lenovo",80000);
+		Product prod3 = new Product(3,"tab","Apple",120000);		
+		Cart mycart = new Cart();		
+		mycart.addProduct(prod1);
+		mycart.addProduct(prod2);
+		mycart.addProduct(prod3);
+		System.out.println("Afer Add Product");
+		mycart.listProduct();
+		prod2.setPrice(85000);
+		mycart.updateProduct(prod2);
+		System.out.println("Afer update Product");
+		mycart.listProduct();
+		System.out.println("delete Product");		
+		mycart.deleteProduct(2);
+		mycart.listProduct();
+		System.out.println("Search by Supplier");
+		mycart.productsBySupplier("Apple");
+		
+		
+	}
+
+}
