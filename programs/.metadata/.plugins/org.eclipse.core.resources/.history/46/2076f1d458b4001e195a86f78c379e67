@@ -38,24 +38,4 @@ public class AccountManagement {
 		}
 		return balance;
 	}
-	
-	public int withdraw(int actnum,int amttowithdraw) {
-		int balance=-1;
-		boolean isFound=false;
-		for(Account act:accountList) {
-			if (act.getActnum()==actnum) {
-				isFound=true;
-				if(act.getBalance()>amttowithdraw) {
-					act.setBalance(act.getBalance()-amttowithdraw);
-					balance= act.getBalance();	
-				}else {
-					System.out.println("You donot have enough balance");
-				}				
-			}
-		}
-		if (isFound !=true) {
-			System.out.println("Account Number "+actnum +" not found");
-		}
-		return balance;
-	}
 }

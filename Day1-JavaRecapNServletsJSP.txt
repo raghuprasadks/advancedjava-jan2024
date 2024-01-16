@@ -39,7 +39,8 @@ in string
 
 2. Create  AccountManager class
 a. int deposit(actnum,amttodeposit)
-this method should increase the balance by amttodeposit
+this method should increase the balance by amttodeposit.
+This should return the balance
 b. int withdraw(actnum,amttowithdraw)
 this method should decrease the balance by amttowithdraw
 c. int checkbalance(actnum)
@@ -47,6 +48,7 @@ this method should display the balance of the account
 d. int createaccount(int actnum,String name,String bank,int balance)
 this method can create a zero balance account
 account created should be added to list of accounts
+e. int displayTotalBalancebyBank(String bank)
 
 
 

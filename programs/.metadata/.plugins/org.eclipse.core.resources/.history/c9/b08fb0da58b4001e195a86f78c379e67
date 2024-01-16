@@ -50,7 +50,8 @@ public class AccountManagement {
 					balance= act.getBalance();	
 				}else {
 					System.out.println("You donot have enough balance");
-				}				
+				}
+				
 			}
 		}
 		if (isFound !=true) {

@@ -22,7 +22,8 @@ public class AccountManagement {
 		Account account = new Account(actnum,name,bank,balance);
 		accountList.add(account);
 		return actnum;
-	}	
+	}
+	
 	public int deposit(int actnum,int amttodeposit) {
 		int balance=-1;
 		boolean isFound=false;
@@ -31,26 +32,6 @@ public class AccountManagement {
 				act.setBalance(act.getBalance()+amttodeposit);
 				balance= act.getBalance();	
 				isFound=true;
-			}
-		}
-		if (isFound !=true) {
-			System.out.println("Account Number "+actnum +" not found");
-		}
-		return balance;
-	}
-	
-	public int withdraw(int actnum,int amttowithdraw) {
-		int balance=-1;
-		boolean isFound=false;
-		for(Account act:accountList) {
-			if (act.getActnum()==actnum) {
-				isFound=true;
-				if(act.getBalance()>amttowithdraw) {
-					act.setBalance(act.getBalance()-amttowithdraw);
-					balance= act.getBalance();	
-				}else {
-					System.out.println("You donot have enough balance");
-				}				
 			}
 		}
 		if (isFound !=true) {
