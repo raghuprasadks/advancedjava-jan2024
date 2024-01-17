@@ -1,6 +1,8 @@
 Agenda:
 
 1. Java Recap
+http://www.kaushalya.tech/
+git
 2. Servlets
 3. SQL
 4. JSP

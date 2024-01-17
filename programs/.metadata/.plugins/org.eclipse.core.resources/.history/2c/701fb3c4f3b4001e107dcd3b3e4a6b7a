@@ -1,0 +1,10 @@
+package oopsdemo;
+
+public class Bike extends Vehicle{
+
+	public Bike(String regno, String owner, String color, int speed) {
+		super(regno, owner, color, speed);
+		// TODO Auto-generated constructor stub
+	}
+
+}
