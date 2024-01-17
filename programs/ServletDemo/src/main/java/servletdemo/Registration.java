@@ -10,6 +10,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
 /**
@@ -33,8 +35,48 @@ public class Registration extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advancedjava", "root",
+					"kaushalya@2017");
+
+			Statement ps = con.createStatement();
+
+			out.print("<table width=50% border=1>");
+			out.print("<caption>Result:</caption>");
+
+			ResultSet rs = ps.executeQuery("select * from user");
+
+			/* Printing column names */
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int total = rsmd.getColumnCount();
+			out.print("<tr>");
+			for (int i = 1; i <= total; i++) {
+				out.print("<th>" + rsmd.getColumnName(i) + "</th>");
+			}
+
+			out.print("</tr>");
+
+			/* Printing result */
+
+			while (rs.next()) {
+				out.print("<tr><td>" + rs.getInt(1) + "</td><td>" + rs.getString(2) + "</td><td>" + rs.getString(3)
+						+ "</td><td>" + rs.getString(4) + "</td></tr>");
+
+			}
+
+			out.print("</table>");
+
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+
+		finally {
+			out.close();
+		}
+
 	}
 
 	/**
@@ -56,13 +98,13 @@ public class Registration extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advancedjava", "root",
 					"kaushalya@2017");
-			//Statement stmt = con.createStatement();		
+			// Statement stmt = con.createStatement();
 			String sql = "insert into user(name,email,password) values(?,?,?)";
 			PreparedStatement statement = con.prepareStatement(sql);
 			statement.setString(1, name);
 			statement.setString(2, email);
 			statement.setString(3, password);
-			System.out.println("sql ##"+sql);
+			System.out.println("sql ##" + sql);
 			int result = statement.executeUpdate();
 			System.out.println("records inserted " + result);
 
