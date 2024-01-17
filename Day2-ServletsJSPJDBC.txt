@@ -34,9 +34,16 @@ by  diplaying ac along with other information
 2. Servlets
 Dynamicwebproject
 http://localhost:8080/ServletDemo/HelloServlet
-lifecycle methods
 
 
 3. SQL
+
+JDBC - Java Database Connectivity
+download jar
+https://dev.mysql.com/downloads/connector/j/
+
+
+
+
 4. JSP
 5. JDBC
