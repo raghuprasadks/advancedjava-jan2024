@@ -1,0 +1,29 @@
+package oopsdemo;
+
+public class AndroidTV implements IUniversalRemote{
+
+	@Override
+	public void SwitcOn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SwitcOff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void changeChannel(String channel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void changeVolume(int volume) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
