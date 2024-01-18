@@ -1,0 +1,49 @@
+Agenda:
+
+1. Java Recap
+http://www.kaushalya.tech/
+git
+Abstraction 
+
+Interface,Abstractclass 
+Inheritance
+
+Vehicle
+String regno
+String owner
+String color
+int speed
+start() - kick start
+move() - speed = 10
+stop() - speed =0
+info() - Regno-owner-color
+
+Bike
+Car
+TestInheritance
+
+Assignment:
+Create Car Class. 
+Car should extend from Vehicle class
+Add String AC as a member variable
+
+modify constructure accordingly
+override toString method in Car class
+by  diplaying ac along with other information
+
+2. Servlets
+Dynamicwebproject
+http://localhost:8080/ServletDemo/HelloServlet
+
+
+3. SQL
+
+JDBC - Java Database Connectivity
+download jar
+https://dev.mysql.com/downloads/connector/j/
+
+
+
+
+4. JSP
+5. JDBC
