@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import springmaster.bean.Customer;
+import springmaster.bean.Employee;
 
 public class SpringGettingStarted {
 
@@ -14,6 +15,11 @@ public class SpringGettingStarted {
 		System.out.println("Get bean with class name");
 		Customer customerBean = applicationContext.getBean(Customer.class);
 		System.out.println(customerBean);
+		
+		System.out.println("Employee - Get bean with bean id");
+		Employee employee = (Employee) applicationContext.getBean("employee");
+		System.out.println(employee.info());
+		
 		
 		
 

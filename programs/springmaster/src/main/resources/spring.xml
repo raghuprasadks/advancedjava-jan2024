@@ -9,4 +9,18 @@
     <property name="name" value="Ravi"></property>
     <property name="location" value="Bengaluru"></property>
     </bean>
+    
+    <bean id="employee" class="springmaster.bean.Employee">
+    <constructor-arg name="id" type="int" value="1"></constructor-arg>
+    <constructor-arg name="name" type="String" value="ravi"></constructor-arg>
+    <constructor-arg name="dept" type="String" value="IT"></constructor-arg>
+    <constructor-arg name="address" ref="address"></constructor-arg>  
+    </bean>
+    
+	<bean id="address" class="springmaster.bean.Address">
+    <constructor-arg name="housenum" type="int" value="1094"></constructor-arg>
+    <constructor-arg name="street" type="String" value="23 cross"></constructor-arg>
+    <constructor-arg name="location" type="String" value="Bengaluru"></constructor-arg>  
+    </bean>
+    
 </beans>
