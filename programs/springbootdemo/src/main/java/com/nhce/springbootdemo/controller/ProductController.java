@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,8 +50,25 @@ public class ProductController {
 			this.productList.remove(prodtodelete);
 			msg="product with code "+code +" deleted successfully ";
 		}
-		return msg;		
-	 
-			
+		return msg;			
+	}
+	
+	@PutMapping("/updateProduct/{code}")
+	public String updateProduct(@RequestBody Product product,@PathVariable int code) {
+		String msg="product not found";		
+		boolean isFound = false;
+		int index = -1;
+		for(int i=0;i<this.productList.size();i++) {
+			if (this.productList.get(i).getCode() ==code) {
+				index=i;
+				isFound=true;			
+				break;
+			}
+		}
+		if(isFound) {
+			this.productList.set(index,product);
+			msg="product with code "+code +" updated successfully ";
+		}
+		return msg;			
 	}
 }
