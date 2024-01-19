@@ -26,6 +26,14 @@ Spring Web - RESTFUL Web Service
 Spring Data JPA - JPA
 MySQLDRIVER - DB Driver
 
+Step 2 - Create User Entity
+Step 3 - DAO
 
-
+{
+    "id": 1,
+    "userName": "ravi",
+    "mobileNumber": "9845547471",
+    "email": "prasadraghuks@gmail.com",
+    "password": "test@123"
+}
 
