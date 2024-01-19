@@ -1,0 +1,31 @@
+Spring boot
+Web
+
+Data
+JPA (Java Persistance API)
+
+Hibernate
+
+Annotations
+@Entity
+@Repository
+@RestController
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+@RequestBody
+@PathVariable
+
+
+Step 1 - create springbootcrud project
+using start.spring.io
+
+Dependencies
+Spring Web - RESTFUL Web Service
+Spring Data JPA - JPA
+MySQLDRIVER - DB Driver
+
+
+
+

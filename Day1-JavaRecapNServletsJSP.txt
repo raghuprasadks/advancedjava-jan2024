@@ -1,0 +1,57 @@
+Software for the workshop
+1. Download jdk 17
+
+https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+
+2.https://www.eclipse.org/downloads/
+
+3. mysql server with workbench
+4. postman
+
+Sample programs
+1. Create Product class
+a. having following attributes
+int code,String name,String supplier,int price
+b. Constructor  to initialize above attibutes
+c. toString()
+2. Create Cart class having following methods
+a. addProduct(Product)
+adds the product to productlist
+b. listProduct ()
+displays all the products added
+c. deleteProduct (code)
+delete the product with the code
+d. updateProduct(Product)
+updates the product
+6. productsBySupplier(supplier)
+7. prodcustbyPrice(int min,int max)
+
+Programs on List  and Set
+
+Example 2:
+
+1. Create Account class
+a. Having following attributes
+int actnum,String name,String bank,int balance
+b. Create a constructor to initialize above attributes
+c. Override toString () method to display account 
+in string
+
+2. Create  AccountManager class
+a. int deposit(actnum,amttodeposit)
+this method should increase the balance by amttodeposit.
+This should return the balance
+b. int withdraw(actnum,amttowithdraw)
+this method should decrease the balance by amttowithdraw
+c. int checkbalance(actnum)
+this method should display the balance of the account
+d. int createaccount(int actnum,String name,String bank,int balance)
+this method can create a zero balance account
+account created should be added to list of accounts
+e. int displayTotalBalancebyBank(String bank)
+
+
+
+
+
+

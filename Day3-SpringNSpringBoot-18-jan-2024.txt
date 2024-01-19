@@ -17,5 +17,28 @@ Spring boot
 https://start.spring.io/
 
 
+uadia
+
+<aadhar>
+
+Service 
+http://uadia/getAadharInfo
+{
+"name":xxx
+
+}
 
 
+java script object
+product={
+code:1,
+name:'ravi'
+}
+
+json
+product=[{
+"code":1,
+"name":'ravi'
+}]
+
+API - Application Programming interface
