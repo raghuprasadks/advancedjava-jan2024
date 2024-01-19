@@ -37,3 +37,16 @@ Step 3 - DAO
     "password": "test@123"
 }
 
+Assignment
+2. Write Restful api for product
+having following attributes
+	Integer id,String name,String supplier,int price
+
+api - /api/product with crud operation
+api/productbysupplier
+api/productbypricerange
+
+https://www.baeldung.com/spring-data-jpa-query
+
+
+
